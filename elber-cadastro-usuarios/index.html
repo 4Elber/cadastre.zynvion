@@ -13,81 +13,9 @@
   <title>Vite + React</title>
 </head>
 
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    text-align: center;
-  }
-
-  .container {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-  }
-
-  .container:hover {
-    transform: scale(1.05);
-  }
-
-  h1 {
-    margin-bottom: 15px;
-  }
-
-  button {
-    background: #ff7eb3;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-top: 10px;
-  }
-
-  button:hover {
-    background: #ff5a92;
-  }
-
-  #loading {
-    display: none;
-    margin-top: 10px;
-    font-size: 14px;
-  }
-</style>
-
 <body>
-  <div class="container">
-    <h1>Bem-vindo ao Portal</h1>
-    <p>Clique no botão abaixo para acessar o sistema</p>
-    <button onclick="redirect()">Acessar Sistema</button>
-    <p id="loading">Redirecionando...</p>
-  </div>
-
-  <script>
-    function redirect() {
-      const loadingText = document.getElementById('loading');
-      loadingText.style.display = 'block';
-
-      setTimeout(() => {
-        window.location.href = "https://cadastrezynvion.netlify.app/";
-      }, 2000); // Pequeno atraso para efeito visual
-    }
-  </script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 
 </html>
